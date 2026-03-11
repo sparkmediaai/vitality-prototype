@@ -3,19 +3,20 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Meet Allyse Hargrove - Licensed & Board-Certified Massage Therapist at Vitality Restored Clinic" />
+  <meta name="description" content="Meet Allyse Hargrove - Licensed & Board-Certified Massage Therapist at Vitality Restored Clinic. Expert care blending technical expertise with deep understanding of body biomechanics." />
   <title>About Us - Vitality Restored Clinic</title>
 
   <link rel="preload" href="assets/images/20230609-L1030521-Enhanced-SR.jpg" as="image" />
   <link rel="stylesheet" href="css/styles.css" />
   <style>
-    /* About page specific styles */
+    /* Enhanced About Page Styles */
     .about-hero {
-      background: linear-gradient(135deg, rgba(2, 6, 23, 0.9) 0%, rgba(15, 23, 42, 0.95) 100%);
+      background: linear-gradient(135deg, rgba(15, 23, 42, 0.95) 0%, rgba(30, 41, 59, 0.98) 100%);
       color: white;
-      padding: 6rem 0 4rem;
+      padding: 8rem 0 5rem;
       position: relative;
       overflow: hidden;
+      text-align: center;
     }
     
     .about-hero::before {
@@ -26,213 +27,191 @@
       right: 0;
       bottom: 0;
       background: url('assets/images/20230609-L1030521-Enhanced-SR.jpg') center/cover no-repeat;
-      opacity: 0.2;
+      opacity: 0.15;
       z-index: -1;
     }
     
     .about-hero h1 {
-      font-size: 3.5rem;
+      font-size: 4rem;
       font-weight: 800;
-      margin-bottom: 1rem;
-      background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 100%);
+      margin-bottom: 1.5rem;
+      background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 50%, #f472b6 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
+      animation: gradientShift 8s ease infinite;
+      background-size: 200% 200%;
+    }
+    
+    @keyframes gradientShift {
+      0%, 100% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
     }
     
     .about-hero .lead {
-      font-size: 1.25rem;
-      max-width: 600px;
-      margin: 0 auto;
+      font-size: 1.5rem;
+      max-width: 800px;
+      margin: 0 auto 2rem;
       opacity: 0.9;
+      line-height: 1.6;
     }
     
-    .profile-section {
+    .content-section {
       padding: 5rem 0;
-      background: linear-gradient(to bottom, #f8fafc 0%, #ffffff 100%);
+      background: linear-gradient(to bottom, #ffffff 0%, #f8fafc 100%);
     }
     
-    .profile-card {
+    .content-container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+    
+    .content-block {
       background: white;
       border-radius: 20px;
-      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
-      overflow: hidden;
-      max-width: 1000px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 0;
-    }
-    
-    @media (max-width: 768px) {
-      .profile-card {
-        grid-template-columns: 1fr;
-      }
-    }
-    
-    .profile-image {
-      position: relative;
-      overflow: hidden;
-      min-height: 500px;
-    }
-    
-    .profile-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.8s ease;
-    }
-    
-    .profile-card:hover .profile-image img {
-      transform: scale(1.05);
-    }
-    
-    .profile-content {
       padding: 3rem;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-    
-    .profile-title {
-      color: #1e293b;
-      font-size: 2rem;
-      font-weight: 700;
-      margin-bottom: 0.5rem;
-    }
-    
-    .profile-subtitle {
-      color: #64748b;
-      font-size: 1.1rem;
-      margin-bottom: 2rem;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-    
-    .profile-subtitle::before {
-      content: '';
-      width: 20px;
-      height: 2px;
-      background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 100%);
-    }
-    
-    .profile-bio {
-      color: #475569;
-      line-height: 1.8;
-      margin-bottom: 2rem;
-    }
-    
-    .profile-bio p {
-      margin-bottom: 1.5rem;
-    }
-    
-    .specialties {
-      background: #f1f5f9;
-      border-radius: 12px;
-      padding: 2rem;
-      margin-top: 2rem;
-    }
-    
-    .specialties h3 {
-      color: #1e293b;
-      font-size: 1.25rem;
-      margin-bottom: 1rem;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-    
-    .specialties h3::before {
-      content: '✦';
-      color: #60a5fa;
-    }
-    
-    .specialties-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 1rem;
-    }
-    
-    .specialty-item {
-      background: white;
-      padding: 1rem;
-      border-radius: 8px;
-      border-left: 4px solid #60a5fa;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+      margin-bottom: 3rem;
+      border: 1px solid #e2e8f0;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
     
-    .specialty-item:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    .content-block:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.12);
     }
     
-    .specialty-item h4 {
+    .content-block h2 {
       color: #1e293b;
-      font-size: 1rem;
-      margin-bottom: 0.5rem;
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+      position: relative;
+      padding-bottom: 1rem;
     }
     
-    .specialty-item p {
+    .content-block h2::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 60px;
+      height: 4px;
+      background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 100%);
+      border-radius: 2px;
+    }
+    
+    .content-block p {
+      color: #475569;
+      line-height: 1.8;
+      margin-bottom: 1.5rem;
+      font-size: 1.125rem;
+    }
+    
+    .highlight-box {
+      background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+      border-left: 4px solid #0ea5e9;
+      padding: 2rem;
+      border-radius: 12px;
+      margin: 2rem 0;
+    }
+    
+    .highlight-box p {
+      color: #0369a1;
+      font-size: 1.25rem;
+      font-weight: 500;
+      margin: 0;
+    }
+    
+    .image-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin: 3rem 0;
+    }
+    
+    .gallery-item {
+      border-radius: 16px;
+      overflow: hidden;
+      position: relative;
+      aspect-ratio: 4/3;
+      background: #f1f5f9;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       color: #64748b;
-      font-size: 0.875rem;
-      line-height: 1.5;
+      font-size: 1.5rem;
+      font-weight: 600;
     }
     
-    .philosophy-section {
+    .gallery-item:nth-child(1) { background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); }
+    .gallery-item:nth-child(2) { background: linear-gradient(135deg, #fdf2f8 0%, #fce7f3 100%); }
+    .gallery-item:nth-child(3) { background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%); }
+    .gallery-item:nth-child(4) { background: linear-gradient(135deg, #fefce8 0%, #fef9c3 100%); }
+    
+    .values-section {
       padding: 5rem 0;
       background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
       color: white;
     }
     
-    .philosophy-grid {
+    .values-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 3rem;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
       max-width: 1200px;
       margin: 0 auto;
+      padding: 0 2rem;
     }
     
-    .philosophy-card {
+    .value-card {
       text-align: center;
-      padding: 2rem;
-      border-radius: 16px;
+      padding: 2.5rem 2rem;
+      border-radius: 20px;
       background: rgba(255, 255, 255, 0.05);
       backdrop-filter: blur(10px);
       border: 1px solid rgba(255, 255, 255, 0.1);
-      transition: transform 0.3s ease, background 0.3s ease;
+      transition: all 0.3s ease;
     }
     
-    .philosophy-card:hover {
-      transform: translateY(-8px);
+    .value-card:hover {
+      transform: translateY(-10px);
       background: rgba(255, 255, 255, 0.1);
+      border-color: rgba(255, 255, 255, 0.2);
     }
     
-    .philosophy-icon {
-      width: 60px;
-      height: 60px;
+    .value-icon {
+      width: 70px;
+      height: 70px;
       background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 100%);
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
       margin: 0 auto 1.5rem;
-      font-size: 1.5rem;
+      font-size: 2rem;
+      animation: float 3s ease-in-out infinite;
     }
     
-    .philosophy-card h3 {
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+    
+    .value-card h3 {
       font-size: 1.5rem;
       margin-bottom: 1rem;
       color: #e2e8f0;
     }
     
-    .philosophy-card p {
+    .value-card p {
       color: #94a3b8;
       line-height: 1.6;
+      font-size: 1rem;
     }
     
     .cta-section {
-      padding: 5rem 0;
+      padding: 6rem 0;
       text-align: center;
       background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
     }
@@ -240,45 +219,63 @@
     .cta-content {
       max-width: 600px;
       margin: 0 auto;
+      padding: 0 2rem;
     }
     
     .cta-content h2 {
-      font-size: 2.5rem;
+      font-size: 3rem;
       color: #1e293b;
-      margin-bottom: 1rem;
+      margin-bottom: 1.5rem;
+      background: linear-gradient(135deg, #1e293b 0%, #475569 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
     }
     
     .cta-content p {
       color: #64748b;
-      font-size: 1.125rem;
-      margin-bottom: 2rem;
+      font-size: 1.25rem;
+      margin-bottom: 2.5rem;
+      line-height: 1.6;
     }
     
     /* Animation classes */
-    .reveal {
+    .fade-in {
       opacity: 0;
       transform: translateY(30px);
       transition: opacity 0.8s ease, transform 0.8s ease;
     }
     
-    .reveal.active {
+    .fade-in.visible {
       opacity: 1;
       transform: translateY(0);
     }
     
-    .delay-1 { transition-delay: 0.1s; }
-    .delay-2 { transition-delay: 0.2s; }
-    .delay-3 { transition-delay: 0.3s; }
-    .delay-4 { transition-delay: 0.4s; }
+    .delay-1 { transition-delay: 0.2s; }
+    .delay-2 { transition-delay: 0.4s; }
+    .delay-3 { transition-delay: 0.6s; }
+    .delay-4 { transition-delay: 0.8s; }
     
-    /* Floating animation */
-    @keyframes float {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-10px); }
-    }
-    
-    .floating {
-      animation: float 3s ease-in-out infinite;
+    @media (max-width: 768px) {
+      .about-hero h1 {
+        font-size: 2.5rem;
+      }
+      
+      .about-hero .lead {
+        font-size: 1.25rem;
+      }
+      
+      .content-block {
+        padding: 2rem;
+      }
+      
+      .content-block h2 {
+        font-size: 2rem;
+      }
+      
+      .cta-content h2 {
+        font-size: 2.5rem;
+      }
     }
   </style>
 </head>
@@ -287,7 +284,7 @@
 
   <header class="site-header" data-header>
     <div class="container header-inner">
-      <a class="brand" href="/" aria-label="Vitality Restored home">
+      <a class="brand" href="/vitality-prototype/" aria-label="Vitality Restored home">
         <img src="assets/images/vitality-restored-footer-logo.webp" width="160" height="54" alt="Vitality Restored" loading="eager" decoding="async" />
       </a>
 
@@ -309,99 +306,84 @@
   </header>
 
   <main id="main">
-    <section class="about-hero" aria-label="About Vitality Restored">
+    <section class="about-hero">
       <div class="container">
-        <div class="text-center">
-          <h1 class="reveal">Meet Our Founder</h1>
-          <p class="lead reveal delay-1">A dedicated practitioner committed to helping you move, feel, and perform better through personalized, results-driven therapy.</p>
-        </div>
+        <h1 class="fade-in">Meet Allyse Hargrove</h1>
+        <p class="lead fade-in delay-1">Licensed & Board-Certified Massage Therapist serving clients in Nevada and Georgia with expert care since 2016.</p>
       </div>
     </section>
 
-    <section class="profile-section">
-      <div class="container">
-        <div class="profile-card reveal">
-          <div class="profile-image">
-            <!-- Placeholder for therapist image - using clinic image for now -->
-            <img src="assets/images/DSC07554.jpg" alt="Allyse Hargrove, Licensed & Board-Certified Massage Therapist" loading="lazy" decoding="async" />
+    <section class="content-section">
+      <div class="content-container">
+        <div class="content-block fade-in">
+          <h2>Expert Care & Technical Excellence</h2>
+          <p>Allyse Hargrove is a highly skilled and intuitive Licensed and Board-Certified Massage Therapist, proudly serving clients in both Nevada and Georgia. Since 2016, she has been dedicated to delivering high-quality patient care, blending technical expertise with a deep understanding of the body's biomechanics.</p>
+          
+          <p>With a keen eye for assessment, Allyse excels at identifying the root causes of muscular tension, dysfunction, and pain. She takes a personalized approach to every session—carefully evaluating posture, movement patterns, and areas of discomfort to determine the most effective treatment plan.</p>
+          
+          <div class="highlight-box">
+            <p>"Our goal is not only to alleviate discomfort but to empower clients with the tools and knowledge they need to maintain long-term wellness."</p>
           </div>
-          <div class="profile-content">
-            <h2 class="profile-title">Allyse Hargrove</h2>
-            <div class="profile-subtitle">Licensed & Board-Certified Massage Therapist</div>
-            
-            <div class="profile-bio">
-              <p>Allyse Hargrove is a highly skilled and intuitive Licensed and Board-Certified Massage Therapist, proudly serving clients in both Nevada and Georgia. Since 2016, she has been dedicated to delivering high-quality patient care, blending technical expertise with a deep understanding of the body's biomechanics.</p>
-              
-              <p>With a keen eye for assessment, Allyse excels at identifying the root causes of muscular tension, dysfunction, and pain. She takes a personalized approach to every session—carefully evaluating posture, movement patterns, and areas of discomfort to determine the most effective treatment plan.</p>
-              
-              <p>Her ability to adapt pressure, technique, and modality ensures that each client receives targeted, results-driven therapy tailored to their specific needs.</p>
-            </div>
-            
-            <div class="specialties">
-              <h3>Specialized Techniques</h3>
-              <div class="specialties-grid">
-                <div class="specialty-item reveal delay-1">
-                  <h4>Neuromuscular Therapy</h4>
-                  <p>Targeted treatment for chronic pain and muscle dysfunction</p>
-                </div>
-                <div class="specialty-item reveal delay-2">
-                  <h4>Myofascial Release</h4>
-                  <p>Gentle pressure to release tension in connective tissue</p>
-                </div>
-                <div class="specialty-item reveal delay-3">
-                  <h4>Sports Massage</h4>
-                  <p>Enhance athletic performance and recovery</p>
-                </div>
-                <div class="specialty-item reveal delay-4">
-                  <h4>Postural Assessment</h4>
-                  <p>Comprehensive evaluation for optimal alignment</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="philosophy-section">
-      <div class="container">
-        <div class="text-center mb-12">
-          <h2 class="reveal" style="color: white; font-size: 2.5rem; margin-bottom: 1rem;">Our Treatment Philosophy</h2>
-          <p class="reveal delay-1" style="color: #94a3b8; max-width: 600px; margin: 0 auto;">A holistic approach to wellness that goes beyond symptom relief</p>
+          
+          <p>Her ability to adapt pressure, technique, and modality ensures that each client receives targeted, results-driven therapy tailored to their specific needs.</p>
         </div>
         
-        <div class="philosophy-grid">
-          <div class="philosophy-card reveal delay-1">
-            <div class="philosophy-icon floating">🎯</div>
-            <h3>Personalized Care</h3>
-            <p>Every treatment plan is customized to your unique needs, goals, and body mechanics. We don't believe in one-size-fits-all solutions.</p>
+        <div class="content-block fade-in delay-2">
+          <h2>Specialized Techniques & Modalities</h2>
+          <p>Allyse specializes in Neuromuscular Therapy, Myofascial Release, and Sports Massage, using these techniques and others to address chronic and acute injuries, correct postural imbalances, and enhance overall human performance.</p>
+          
+          <div class="image-gallery">
+            <div class="gallery-item">Neuromuscular Therapy</div>
+            <div class="gallery-item">Myofascial Release</div>
+            <div class="gallery-item">Sports Massage</div>
+            <div class="gallery-item">Postural Assessment</div>
           </div>
           
-          <div class="philosophy-card reveal delay-2">
-            <div class="philosophy-icon floating">🔍</div>
+          <p>Whether working with athletes striving for peak efficiency, individuals recovering from injury, or clients seeking relief from the strains of daily life, she is committed to helping them move, feel, and perform better.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="values-section">
+      <div class="container">
+        <h2 class="text-center fade-in" style="color: white; font-size: 2.5rem; margin-bottom: 3rem;">Our Treatment Philosophy</h2>
+        
+        <div class="values-grid">
+          <div class="value-card fade-in delay-1">
+            <div class="value-icon">🎯</div>
+            <h3>Personalized Approach</h3>
+            <p>Every treatment is customized to your unique needs, goals, and body mechanics. No two sessions are ever the same.</p>
+          </div>
+          
+          <div class="value-card fade-in delay-2">
+            <div class="value-icon">🔍</div>
             <h3>Root Cause Focus</h3>
-            <p>We go beyond temporary relief to identify and address the underlying causes of pain and dysfunction for lasting results.</p>
+            <p>We go beyond temporary relief to identify and address the underlying causes of pain and dysfunction.</p>
           </div>
           
-          <div class="philosophy-card reveal delay-3">
-            <div class="philosophy-icon floating">💪</div>
-            <h3>Empowerment</h3>
-            <p>Our goal is to equip you with the knowledge and tools needed to maintain your wellness long after your session ends.</p>
+          <div class="value-card fade-in delay-3">
+            <div class="value-icon">💪</div>
+            <h3>Empowerment & Education</h3>
+            <p>Equipping you with knowledge and tools for long-term wellness, not just temporary relief.</p>
+          </div>
+          
+          <div class="value-card fade-in delay-4">
+            <div class="value-icon">🌟</div>
+            <h3>Continuous Growth</h3>
+            <p>Passionate about refining skills to provide the most effective treatments possible for every client.</p>
           </div>
         </div>
       </div>
     </section>
 
     <section class="cta-section">
-      <div class="container">
-        <div class="cta-content">
-          <h2 class="reveal">Ready to Experience the Difference?</h2>
-          <p class="reveal delay-1">Whether you're an athlete striving for peak performance, recovering from injury, or seeking relief from daily stress, we're here to help you achieve your wellness goals.</p>
-          
-          <div class="reveal delay-2">
-            <a class="btn btn-primary" href="/vitality-prototype/#contact" style="margin-right: 1rem;">Book Your Session</a>
-            <a class="btn btn-ghost" href="/vitality-prototype/services.html">Explore Services</a>
-          </div>
+      <div class="cta-content">
+        <h2 class="fade-in">Ready to Experience Expert Care?</h2>
+        <p class="fade-in delay-1">Whether you're an athlete striving for peak performance, recovering from injury, or seeking relief from daily stress, we're here to help you achieve your wellness goals with personalized, expert care.</p>
+        
+        <div class="fade-in delay-2">
+          <a class="btn btn-primary" href="/vitality-prototype/#contact" style="margin-right: 1rem; font-size: 1.125rem; padding: 1rem 2rem;">Book Your Session</a>
+          <a class="btn btn-ghost" href="/vitality-prototype/services.html" style="font-size: 1.125rem; padding: 1rem 2rem;">Explore All Services</a>
         </div>
       </div>
     </section>
@@ -418,25 +400,39 @@
   <script>
     // Animation on scroll
     document.addEventListener('DOMContentLoaded', function() {
-      const reveals = document.querySelectorAll('.reveal');
+      const fadeElements = document.querySelectorAll('.fade-in');
       
-      const revealOnScroll = () => {
-        reveals.forEach(element => {
+      const fadeOnScroll = () => {
+        fadeElements.forEach(element => {
           const windowHeight = window.innerHeight;
           const elementTop = element.getBoundingClientRect().top;
           const elementVisible = 150;
           
           if (elementTop < windowHeight - elementVisible) {
-            element.classList.add('active');
+            element.classList.add('visible');
           }
         });
       };
       
-      window.addEventListener('scroll', revealOnScroll);
-      revealOnScroll(); // Initial check
+      window.addEventListener('scroll', fadeOnScroll);
+      fadeOnScroll(); // Initial check
       
       // Update year in footer
       document.querySelector('[data-year]').textContent = new Date().getFullYear();
+      
+      // Add smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          const href = this.getAttribute('href');
+          if (href !== '#') {
+            e.preventDefault();
+            const target = document.querySelector(href);
+            if (target) {
+              target.scrollIntoView({ behavior: 'smooth' });
+            }
+          }
+        });
+      });
     });
   </script>
 </body>
