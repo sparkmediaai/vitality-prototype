@@ -1,0 +1,443 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Meet Allyse Hargrove - Licensed & Board-Certified Massage Therapist at Vitality Restored Clinic" />
+  <title>About Us - Vitality Restored Clinic</title>
+
+  <link rel="preload" href="assets/images/20230609-L1030521-Enhanced-SR.jpg" as="image" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    /* About page specific styles */
+    .about-hero {
+      background: linear-gradient(135deg, rgba(2, 6, 23, 0.9) 0%, rgba(15, 23, 42, 0.95) 100%);
+      color: white;
+      padding: 6rem 0 4rem;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .about-hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('assets/images/20230609-L1030521-Enhanced-SR.jpg') center/cover no-repeat;
+      opacity: 0.2;
+      z-index: -1;
+    }
+    
+    .about-hero h1 {
+      font-size: 3.5rem;
+      font-weight: 800;
+      margin-bottom: 1rem;
+      background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    .about-hero .lead {
+      font-size: 1.25rem;
+      max-width: 600px;
+      margin: 0 auto;
+      opacity: 0.9;
+    }
+    
+    .profile-section {
+      padding: 5rem 0;
+      background: linear-gradient(to bottom, #f8fafc 0%, #ffffff 100%);
+    }
+    
+    .profile-card {
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+      overflow: hidden;
+      max-width: 1000px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+    }
+    
+    @media (max-width: 768px) {
+      .profile-card {
+        grid-template-columns: 1fr;
+      }
+    }
+    
+    .profile-image {
+      position: relative;
+      overflow: hidden;
+      min-height: 500px;
+    }
+    
+    .profile-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.8s ease;
+    }
+    
+    .profile-card:hover .profile-image img {
+      transform: scale(1.05);
+    }
+    
+    .profile-content {
+      padding: 3rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    
+    .profile-title {
+      color: #1e293b;
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+    
+    .profile-subtitle {
+      color: #64748b;
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    .profile-subtitle::before {
+      content: '';
+      width: 20px;
+      height: 2px;
+      background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 100%);
+    }
+    
+    .profile-bio {
+      color: #475569;
+      line-height: 1.8;
+      margin-bottom: 2rem;
+    }
+    
+    .profile-bio p {
+      margin-bottom: 1.5rem;
+    }
+    
+    .specialties {
+      background: #f1f5f9;
+      border-radius: 12px;
+      padding: 2rem;
+      margin-top: 2rem;
+    }
+    
+    .specialties h3 {
+      color: #1e293b;
+      font-size: 1.25rem;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    .specialties h3::before {
+      content: '✦';
+      color: #60a5fa;
+    }
+    
+    .specialties-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+    
+    .specialty-item {
+      background: white;
+      padding: 1rem;
+      border-radius: 8px;
+      border-left: 4px solid #60a5fa;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .specialty-item:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+    
+    .specialty-item h4 {
+      color: #1e293b;
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+    }
+    
+    .specialty-item p {
+      color: #64748b;
+      font-size: 0.875rem;
+      line-height: 1.5;
+    }
+    
+    .philosophy-section {
+      padding: 5rem 0;
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+      color: white;
+    }
+    
+    .philosophy-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 3rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .philosophy-card {
+      text-align: center;
+      padding: 2rem;
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      transition: transform 0.3s ease, background 0.3s ease;
+    }
+    
+    .philosophy-card:hover {
+      transform: translateY(-8px);
+      background: rgba(255, 255, 255, 0.1);
+    }
+    
+    .philosophy-icon {
+      width: 60px;
+      height: 60px;
+      background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 100%);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.5rem;
+      font-size: 1.5rem;
+    }
+    
+    .philosophy-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: #e2e8f0;
+    }
+    
+    .philosophy-card p {
+      color: #94a3b8;
+      line-height: 1.6;
+    }
+    
+    .cta-section {
+      padding: 5rem 0;
+      text-align: center;
+      background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    }
+    
+    .cta-content {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    
+    .cta-content h2 {
+      font-size: 2.5rem;
+      color: #1e293b;
+      margin-bottom: 1rem;
+    }
+    
+    .cta-content p {
+      color: #64748b;
+      font-size: 1.125rem;
+      margin-bottom: 2rem;
+    }
+    
+    /* Animation classes */
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    .delay-1 { transition-delay: 0.1s; }
+    .delay-2 { transition-delay: 0.2s; }
+    .delay-3 { transition-delay: 0.3s; }
+    .delay-4 { transition-delay: 0.4s; }
+    
+    /* Floating animation */
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+    
+    .floating {
+      animation: float 3s ease-in-out infinite;
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" data-header>
+    <div class="container header-inner">
+      <a class="brand" href="/" aria-label="Vitality Restored home">
+        <img src="assets/images/vitality-restored-footer-logo.webp" width="160" height="54" alt="Vitality Restored" loading="eager" decoding="async" />
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <a href="/vitality-prototype/" class="nav-link">Home</a>
+        <a href="/vitality-prototype/services.html" class="nav-link">Services</a>
+        <a href="/vitality-prototype/about.html" class="nav-link">About</a>
+        <a href="/vitality-prototype/#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="header-cta">
+        <a class="btn btn-primary" href="/vitality-prototype/#contact">Book a Consultation</a>
+      </div>
+
+      <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" data-nav-toggle>
+        <span class="nav-toggle-bars" aria-hidden="true"></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="about-hero" aria-label="About Vitality Restored">
+      <div class="container">
+        <div class="text-center">
+          <h1 class="reveal">Meet Our Founder</h1>
+          <p class="lead reveal delay-1">A dedicated practitioner committed to helping you move, feel, and perform better through personalized, results-driven therapy.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="profile-section">
+      <div class="container">
+        <div class="profile-card reveal">
+          <div class="profile-image">
+            <!-- Placeholder for therapist image - using clinic image for now -->
+            <img src="assets/images/DSC07554.jpg" alt="Allyse Hargrove, Licensed & Board-Certified Massage Therapist" loading="lazy" decoding="async" />
+          </div>
+          <div class="profile-content">
+            <h2 class="profile-title">Allyse Hargrove</h2>
+            <div class="profile-subtitle">Licensed & Board-Certified Massage Therapist</div>
+            
+            <div class="profile-bio">
+              <p>Allyse Hargrove is a highly skilled and intuitive Licensed and Board-Certified Massage Therapist, proudly serving clients in both Nevada and Georgia. Since 2016, she has been dedicated to delivering high-quality patient care, blending technical expertise with a deep understanding of the body's biomechanics.</p>
+              
+              <p>With a keen eye for assessment, Allyse excels at identifying the root causes of muscular tension, dysfunction, and pain. She takes a personalized approach to every session—carefully evaluating posture, movement patterns, and areas of discomfort to determine the most effective treatment plan.</p>
+              
+              <p>Her ability to adapt pressure, technique, and modality ensures that each client receives targeted, results-driven therapy tailored to their specific needs.</p>
+            </div>
+            
+            <div class="specialties">
+              <h3>Specialized Techniques</h3>
+              <div class="specialties-grid">
+                <div class="specialty-item reveal delay-1">
+                  <h4>Neuromuscular Therapy</h4>
+                  <p>Targeted treatment for chronic pain and muscle dysfunction</p>
+                </div>
+                <div class="specialty-item reveal delay-2">
+                  <h4>Myofascial Release</h4>
+                  <p>Gentle pressure to release tension in connective tissue</p>
+                </div>
+                <div class="specialty-item reveal delay-3">
+                  <h4>Sports Massage</h4>
+                  <p>Enhance athletic performance and recovery</p>
+                </div>
+                <div class="specialty-item reveal delay-4">
+                  <h4>Postural Assessment</h4>
+                  <p>Comprehensive evaluation for optimal alignment</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="philosophy-section">
+      <div class="container">
+        <div class="text-center mb-12">
+          <h2 class="reveal" style="color: white; font-size: 2.5rem; margin-bottom: 1rem;">Our Treatment Philosophy</h2>
+          <p class="reveal delay-1" style="color: #94a3b8; max-width: 600px; margin: 0 auto;">A holistic approach to wellness that goes beyond symptom relief</p>
+        </div>
+        
+        <div class="philosophy-grid">
+          <div class="philosophy-card reveal delay-1">
+            <div class="philosophy-icon floating">🎯</div>
+            <h3>Personalized Care</h3>
+            <p>Every treatment plan is customized to your unique needs, goals, and body mechanics. We don't believe in one-size-fits-all solutions.</p>
+          </div>
+          
+          <div class="philosophy-card reveal delay-2">
+            <div class="philosophy-icon floating">🔍</div>
+            <h3>Root Cause Focus</h3>
+            <p>We go beyond temporary relief to identify and address the underlying causes of pain and dysfunction for lasting results.</p>
+          </div>
+          
+          <div class="philosophy-card reveal delay-3">
+            <div class="philosophy-icon floating">💪</div>
+            <h3>Empowerment</h3>
+            <p>Our goal is to equip you with the knowledge and tools needed to maintain your wellness long after your session ends.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <div class="container">
+        <div class="cta-content">
+          <h2 class="reveal">Ready to Experience the Difference?</h2>
+          <p class="reveal delay-1">Whether you're an athlete striving for peak performance, recovering from injury, or seeking relief from daily stress, we're here to help you achieve your wellness goals.</p>
+          
+          <div class="reveal delay-2">
+            <a class="btn btn-primary" href="/vitality-prototype/#contact" style="margin-right: 1rem;">Book Your Session</a>
+            <a class="btn btn-ghost" href="/vitality-prototype/services.html">Explore Services</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <img src="assets/images/vitality-restored-footer-logo.webp" alt="Vitality Restored" width="170" height="56" loading="lazy" decoding="async" />
+      <p class="muted">Prototype redesign • © <span data-year></span> Vitality Restored</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+  <script>
+    // Animation on scroll
+    document.addEventListener('DOMContentLoaded', function() {
+      const reveals = document.querySelectorAll('.reveal');
+      
+      const revealOnScroll = () => {
+        reveals.forEach(element => {
+          const windowHeight = window.innerHeight;
+          const elementTop = element.getBoundingClientRect().top;
+          const elementVisible = 150;
+          
+          if (elementTop < windowHeight - elementVisible) {
+            element.classList.add('active');
+          }
+        });
+      };
+      
+      window.addEventListener('scroll', revealOnScroll);
+      revealOnScroll(); // Initial check
+      
+      // Update year in footer
+      document.querySelector('[data-year]').textContent = new Date().getFullYear();
+    });
+  </script>
+</body>
+</html>
